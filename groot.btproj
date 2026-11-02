@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root BTCPP_format="4" project_name="Project">
-    <include path="behaviour_trees/navigate_through_poses_w_replanning_and_recovery.xml"/>
-    <include path="behaviour_trees/navigate_to_pose_w_replanning_and_recovery.xml"/>
+    <include path="behavior_trees/navigate_through_poses_w_replanning_and_recovery.xml"/>
+    <include path="behavior_trees/navigate_to_pose_w_replanning_and_recovery.xml"/>
     <include path="../../../../../../opt/ros/jazzy/share/nav2_behavior_tree/nav2_tree_nodes.xml"/>
     <!-- Description of Node Models (used by Groot) -->
     <TreeNodesModel>

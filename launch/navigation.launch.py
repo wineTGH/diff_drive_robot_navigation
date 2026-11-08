@@ -28,7 +28,7 @@ from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     # Get the launch directory
-    bringup_dir = get_package_share_directory('nav2_bringup')
+    bringup_dir = get_package_share_directory('diff_drive_robot_navigation')
 
     namespace = LaunchConfiguration('namespace')
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -64,7 +64,6 @@ def generate_launch_description():
     # Create our own temporary YAML files that include substitutions
     param_substitutions = {
         'autostart': autostart,
-        'default_nav_to_poses_bt_xml': '/home/winet/Documents/dvbot_ws/src/diff_drive_robot_navigation/behavior_trees/navigate_to_pose_w_replanning_and_recovery.xml'
     }
 
     configured_params = ParameterFile(
@@ -93,7 +92,7 @@ def generate_launch_description():
 
     declare_params_file_cmd = DeclareLaunchArgument(
         'params_file',
-        default_value=os.path.join(bringup_dir, 'params', 'nav2_params.yaml'),
+        default_value=os.path.join(bringup_dir, 'config', 'nav2_params.yaml'),
         description='Full path to the ROS2 parameters file to use for all launched nodes',
     )
 
